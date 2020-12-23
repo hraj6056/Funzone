@@ -64,7 +64,19 @@ flutter:
     - images/blue.jpg
     - images/back.jpg
     - images/empty.jpg
-    
+    - images/cross.png
+    - images/circle.png
+    - images/edit.png
+    - images/spades.png
+    - images/hearts.png
+    - images/diamonds.png
+    - images/clubs.png
+    - images/back_side.png
+    - images/four.png
+    - images/fifteen.png
+    - images/mineswapper.png
+    - images/solitre.png
+    - images/tictactoe.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

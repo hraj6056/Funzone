@@ -32,7 +32,7 @@ class GameActivity extends StatefulWidget {
 
 class _GameActivityState extends State<GameActivity> {
   // Row and column count of the board
-  int rowCount = 18;
+  int rowCount = 17;
   int columnCount = 10;
 
   // The grid of squares
@@ -60,6 +60,15 @@ class _GameActivityState extends State<GameActivity> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Mineswapper",
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Color(0xFF192A56),
+      ),
       body: ListView(
         children: <Widget>[
           Container(

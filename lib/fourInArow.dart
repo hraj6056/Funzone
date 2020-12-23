@@ -23,8 +23,8 @@ class FourInARow extends StatefulWidget {
 }
 
 class _FourInARowState extends State<FourInARow> {
-  int rowCount = 18;
-  int colCount = 10;
+  int rowCount = 9;
+  int colCount = 7;
   int move;
   List<List<BoardCircle>> board;
   @override
@@ -117,6 +117,15 @@ class _FourInARowState extends State<FourInARow> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Four In A Row",
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Color(0xFF192A56),
+      ),
       body: ListView(
         children: <Widget>[
           Container(

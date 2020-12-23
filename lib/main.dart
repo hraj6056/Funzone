@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'fifteen.dart';
 import 'fourInArow.dart';
 import 'mineswaper.dart';
+import 'tictactoe.dart';
+import 'game_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -35,52 +37,147 @@ class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: <Widget>[
-          RaisedButton(
-            child: Text(
-              "MineSwapper",
-              style: TextStyle(fontSize: 20),
+        appBar: AppBar(
+          title: Text(
+            "FunZone",
+            style: TextStyle(
+              color: Colors.white,
             ),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => GameActivity()));
-            },
-            color: Colors.red,
-            textColor: Colors.yellow,
-            padding: EdgeInsets.all(8.0),
-            splashColor: Colors.grey,
           ),
-          RaisedButton(
-            child: Text(
-              "Fifteen",
-              style: TextStyle(fontSize: 20),
-            ),
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Fifteen()));
-            },
-            color: Colors.red,
-            textColor: Colors.yellow,
-            padding: EdgeInsets.all(8.0),
-            splashColor: Colors.grey,
+          backgroundColor: Color(0xFF192A56),
+        ),
+        body: Container(
+          margin: EdgeInsets.all(100.0),
+          child: ListView(
+            children: <Widget>[
+              Center(
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  height: 125,
+                  width: 125,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => GameActivity()));
+                    }, // Handle your callback.
+                    splashColor: Colors.brown.withOpacity(0.5),
+                    child: Ink(
+                      height: 125,
+                      width: 125,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('images/mineswapper.png'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Center(
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  height: 125,
+                  width: 125,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => GameScreen()));
+                    }, // Handle your callback.
+                    splashColor: Colors.brown.withOpacity(0.5),
+                    child: Ink(
+                      height: 125,
+                      width: 125,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('images/solitre.png'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Center(
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  height: 125,
+                  width: 125,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FourInARow()));
+                    }, // Handle your callback.
+                    splashColor: Colors.brown.withOpacity(0.5),
+                    child: Ink(
+                      height: 125,
+                      width: 125,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('images/four.png'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Center(
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  height: 125,
+                  width: 125,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Fifteen()));
+                    }, // Handle your callback.
+                    splashColor: Colors.brown.withOpacity(0.5),
+                    child: Ink(
+                      height: 125,
+                      width: 125,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('images/fifteen.png'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Center(
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  height: 125,
+                  width: 125,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => HomePage()));
+                    }, // Handle your callback.
+                    splashColor: Colors.brown.withOpacity(0.5),
+                    child: Ink(
+                      height: 125,
+                      width: 125,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('images/tictactoe.png'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
-          RaisedButton(
-            child: Text(
-              "FourInARow",
-              style: TextStyle(fontSize: 20),
-            ),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => FourInARow()));
-            },
-            color: Colors.red,
-            textColor: Colors.yellow,
-            padding: EdgeInsets.all(8.0),
-            splashColor: Colors.grey,
-          )
-        ],
-      ),
-    );
+        ));
   }
 }

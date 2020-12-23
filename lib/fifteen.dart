@@ -67,6 +67,15 @@ class _FifteenState extends State<Fifteen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Fifteen",
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Color(0xFF192A56),
+      ),
       body: ListView(
         children: <Widget>[
           Container(
